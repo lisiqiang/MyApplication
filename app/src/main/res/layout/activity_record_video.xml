@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:dpv="http://schemas.android.com/apk/res-auto"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:background="#424951">
+
+    <FrameLayout
+        android:id="@+id/playContainView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <TextureView
+        android:id="@+id/mTextureView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <library.photosynthesis.cn.myapplication.widget.CameraView
+        android:id="@+id/mCameraView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:layout_gravity="bottom"
+        android:orientation="vertical"
+        android:background="#56282C2F">
+
+        <TextView
+            android:id="@+id/timeTxtId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="00:00"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="10dp"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:textAllCaps="true"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical">
+
+            <Button
+                android:id="@+id/restartBtnId"
+                style="@style/record_btn_style"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="重录"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:visibility="gone"/>
+
+            <Button
+                android:id="@+id/cancelBtnId"
+                style="@style/record_btn_style"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="取消"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"/>
+
+            <library.photosynthesis.cn.myapplication.widget.RecordWidget
+                android:id="@+id/recordBtnId"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_centerInParent="true"
+                dpv:typeMode="video"
+                dpv:circleBackgroundColor="#FFFFFF"
+                dpv:circleLineWidth="3dp"
+                dpv:circleRadius="27dp"
+                dpv:drawingColor="#FA1E3A"
+                dpv:progressLineWidth="3dp"
+                dpv:stateColor="#FFFFFF"/>
+
+            <Button
+                android:id="@+id/uploadBtnId"
+                style="@style/record_btn_style"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:text="上传"
+                android:layout_marginRight="10dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:visibility="gone"/>
+
+            <ImageView
+                android:id="@+id/switchBtnId"
+                android:layout_width="50dp"
+                android:layout_height="25dp"
+                android:padding="0dp"
+                android:layout_marginRight="10dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/camera_facing"
+                android:layout_alignParentRight="true"/>
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</FrameLayout>

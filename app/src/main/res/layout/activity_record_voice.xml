@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:dpv="http://schemas.android.com/apk/res-auto"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:background="#424951">
+
+
+    <library.photosynthesis.cn.myapplication.widget.VoiceLineView
+        android:id="@+id/voicLineViewId"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="110dp"
+        dpv:maxVolume="200"
+        dpv:middleLine="#E0B8B8"
+        dpv:middleLineHeight="1dp"
+        dpv:fineness="three"
+        dpv:rectSpace="2dp"
+        dpv:rectWidth="5dp"
+        dpv:sensibility="four"
+        dpv:viewMode="line"
+        dpv:lineSpeed="90"
+        dpv:voiceLine="@android:color/white"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:layout_gravity="bottom"
+        android:orientation="vertical"
+        android:background="#b5282C2F">
+
+        <TextView
+            android:id="@+id/timeTxtId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/record_voice_tips"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="10dp"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:textAllCaps="true"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical">
+
+            <Button
+                android:id="@+id/restartBtnId"
+                style="@style/record_btn_style"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="重录"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:visibility="gone"/>
+
+            <library.photosynthesis.cn.myapplication.widget.RecordWidget
+                android:id="@+id/recordBtnId"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_centerInParent="true"
+                dpv:typeMode="voice"
+                dpv:circleBackgroundColor="#FFFFFF"
+                dpv:circleLineWidth="3dp"
+                dpv:circleRadius="27dp"
+                dpv:drawingColor="#FA1E3A"
+                dpv:progressLineWidth="3dp"
+                dpv:stateColor="#FFFFFF"/>
+
+            <Button
+                android:id="@+id/uploadBtnId"
+                style="@style/record_btn_style"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:text="上传"
+                android:layout_marginRight="10dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:visibility="gone"/>
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</FrameLayout>

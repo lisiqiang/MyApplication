@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <library.photosynthesis.cn.myapplication.widget.video.StarVideoPlayerStandard
+        android:id="@+id/videoPlayerId"
+        android:layout_width="match_parent"
+        android:layout_height="190dp"/>
+
+    <library.photosynthesis.cn.myapplication.widget.video.StarVideoPlayerStandard
+        android:id="@+id/videoPlayer1Id"
+        android:layout_width="match_parent"
+        android:layout_height="190dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/videoPlayerId"/>
+
+    <library.photosynthesis.cn.myapplication.widget.video.StarVideoPlayerStandard
+        android:id="@+id/videoPlayer2Id"
+        android:layout_width="match_parent"
+        android:layout_height="190dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/videoPlayer1Id"/>
+    
+
+</RelativeLayout>
